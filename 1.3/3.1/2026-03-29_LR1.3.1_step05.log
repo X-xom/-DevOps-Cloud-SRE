@@ -1,0 +1,3 @@
+VSZ vs RSS: VSZ (Virtual Memory Size) — весь адресный пространство процесса (включая библиотеки, swapped-out память). RSS (Resident Set Size) — реальная физическая память (RAM), занятая процессом. VSZ > RSS, так как не вся виртуальная память загружена в RAM.
+STAT символы: S — sleeping, R — running, Z — zombie, + — в переднем плане (foreground), < — высокий приоритет.
+Поиск процессов пользователя: ps -u <username> или ps aux | grep <username>.

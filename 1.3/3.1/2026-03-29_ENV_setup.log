@@ -1,0 +1,72 @@
+=== ENV SETUP LOG Sun Mar 29 02:42:15 AM UTC 2026 ===
+=== PACKAGE INSTALL ===
+Reading package lists...
+Building dependency tree...
+Reading state information...
+htop is already the newest version (3.3.0-4build1).
+stress is already the newest version (1.0.7-1).
+nginx is already the newest version (1.24.0-2ubuntu7.6).
+mc is already the newest version (3:4.8.30-1ubuntu0.1).
+tmux is already the newest version (3.4-1ubuntu0.1).
+git is already the newest version (1:2.43.0-1ubuntu7.3).
+curl is already the newest version (8.5.0-2ubuntu10.8).
+wget is already the newest version (1.21.4-1ubuntu4.1).
+tree is already the newest version (2.1.1-2ubuntu3.24.04.2).
+bash-completion is already the newest version (1:2.11-8).
+sysstat is already the newest version (12.6.1-2).
+iotop is already the newest version (0.6-42-ga14256a-0.2build1).
+iftop is already the newest version (1.0~pre4-9build2).
+lsof is already the newest version (4.95.0-1build3).
+strace is already the newest version (6.8-0ubuntu2).
+ltrace is already the newest version (0.7.3-6.4ubuntu3).
+openssh-server is already the newest version (1:9.6p1-3ubuntu13.15).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+=== WHICH CHECK ===
+/usr/bin/htop
+/usr/bin/stress
+/usr/sbin/nginx
+=== SYSTEMCTL CHECK ===
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/usr/lib/systemd/system/nginx.service; enabled; preset: enabled)
+     Active: active (running) since Sun 2026-03-29 02:20:58 UTC; 21min ago
+       Docs: man:nginx(8)
+    Process: 13743 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 13745 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 13808 (nginx)
+      Tasks: 2 (limit: 2263)
+     Memory: 1.7M (peak: 3.7M)
+        CPU: 47ms
+     CGroup: /system.slice/nginx.service
+             ├─13808 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             └─13811 "nginx: worker process"
+
+Mar 29 02:20:58 student systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Mar 29 02:20:58 student systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+○ ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/usr/lib/systemd/system/ssh.service; disabled; preset: enabled)
+     Active: inactive (dead) since Sun 2026-03-29 02:18:22 UTC; 23min ago
+   Duration: 2min 11.984s
+TriggeredBy: ● ssh.socket
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 1039 (code=exited, status=0/SUCCESS)
+        CPU: 112ms
+
+Mar 29 02:16:10 student sshd[1039]: Server listening on :: port 22.
+Mar 29 02:16:10 student systemd[1]: Started ssh.service - OpenBSD Secure Shell server.
+Mar 29 02:16:17 student sshd[1040]: Accepted password for student from 172.20.10.8 port 44686 ssh2
+Mar 29 02:16:17 student sshd[1040]: pam_unix(sshd:session): session opened for user student(uid=1000) by student(uid=0)
+Mar 29 02:16:43 student sshd[1098]: Accepted password for student from 172.20.10.8 port 44687 ssh2
+Mar 29 02:16:43 student sshd[1098]: pam_unix(sshd:session): session opened for user student(uid=1000) by student(uid=0)
+Mar 29 02:18:22 student sshd[1039]: Received signal 15; terminating.
+Mar 29 02:18:22 student systemd[1]: Stopping ssh.service - OpenBSD Secure Shell server...
+Mar 29 02:18:22 student systemd[1]: ssh.service: Deactivated successfully.
+Mar 29 02:18:22 student systemd[1]: Stopped ssh.service - OpenBSD Secure Shell server.
+=== LAB DIR ===
+total 24
+drwxrwxr-x  2 student student 4096 Mar 29 02:42 .
+drwxr-x--- 12 student student 4096 Mar 29 02:31 ..
+-rw-rw-r--  1 student student 3612 Mar 29 02:42 2026-03-29_ENV_setup.log
+-rw-rw-r--  1 student student  166 Mar 29 02:24 broken.conf
+-rwxrwxr-x  1 student student  175 Mar 29 02:23 cpu_load.sh
+-rwxrwxr-x  1 student student  115 Mar 29 02:23 my_daemon.sh
